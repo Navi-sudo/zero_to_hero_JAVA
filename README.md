@@ -31,3 +31,12 @@ Zero a Herói mexe com meu coração, mas uma outra musica explicaria melhor est
 **Nesse tal lugar** <br>
 **Onde vou parar** <br>
 **Eu sei que pra minha vida vai ser bem melhor** <br>
+
+
+----------------------------------------------------------------
+Nesse repositório tem esses assuntos:
+-
+* Fundamentos de programação
+* Aplicações Web com Java e Spring
+* APIs Seguras, Microsserviços e CI/CD
+* Sistemas Reativos, Observabilidade e Arquitetura Avançada
