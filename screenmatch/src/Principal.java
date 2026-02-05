@@ -1,6 +1,8 @@
-import modelos.animes.screenmatch.Animes;
-import modelos.animes.screenmatch.Filmes;
-import modelos.animes.screenmatch.calculos.CalculadoraDeTempo;
+import animes.screenmatch.calculos.FiltroFavoritos;
+import animes.screenmatch.modelos.Animes;
+import animes.screenmatch.modelos.Episodio;
+import animes.screenmatch.modelos.Filmes;
+import animes.screenmatch.calculos.CalculadoraDeTempo;
 
 public class Principal {
     static void main(String[] args) {
@@ -66,7 +68,18 @@ public class Principal {
         calculadora.inclui(MiraNikki);
         System.out.println(calculadora.getTempoTotal());
 
+        FiltroFavoritos filtro = new FiltroFavoritos();
+        filtro.filtra(Lain);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setAnime(OshiNoKo);
+        episodio.setNome("Mother and Children");
+        episodio.setTotalVisualizacoesMal(100000);
+        filtro.filtra(episodio);
+
 
 
     }
+
 }
