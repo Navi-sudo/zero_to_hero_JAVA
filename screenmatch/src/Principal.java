@@ -4,6 +4,8 @@ import animes.screenmatch.modelos.Episodio;
 import animes.screenmatch.modelos.Filmes;
 import animes.screenmatch.calculos.CalculadoraDeTempo;
 
+import java.util.ArrayList;
+
 public class Principal {
     static void main(String[] args) {
         Animes Lain = new Animes();
@@ -27,6 +29,16 @@ public class Principal {
         //Lain.outroGenero("Drama");
         //System.out.println(Lain.totalGeneros);
 
+        Animes onePiece = new Animes();
+        onePiece.setNome("One Piece");
+        onePiece.setEpisodios(1148);
+        onePiece.setGenero("Shonen");
+        onePiece.setTemporada(1);
+        onePiece.setAutor("Eichiiro Oda");
+        onePiece.setDuracaoEmMinutos(24);
+        onePiece.ficha();
+        System.out.println("Duração para maratonar One Piece: " + onePiece.getDuracaoEmMinutos());
+
         Animes OshiNoKo = new Animes();
         OshiNoKo.setNome("Oshi no Ko");
         OshiNoKo.setEpisodios(12);
@@ -48,15 +60,20 @@ public class Principal {
         MiraNikki.ficha();
         System.out.println("Temporadas: " + MiraNikki.getTemporada());
 
-        Filmes EVA1 = new Filmes();
-        EVA1.setNome("Evangelion: 1.11 Você (Não) Está Sozinho");
+        Filmes perfectBlue = new Filmes("Perfect Blue");
+        perfectBlue.setGenero("Sena");
+        perfectBlue.setDuracaoEmMinutos(73);
+        perfectBlue.setAutor("Sadayuki Murai & Yoshikazu Takeuchi");
+        perfectBlue.setDiretor("Satoshi Kon");
+        perfectBlue.avalia(8);
+
+        Filmes EVA1 = new Filmes("Evangelion: 1.11 Você (Não) Está Sozinho");
         EVA1.setGenero("Mecha");
         EVA1.setDuracaoEmMinutos(98);
         EVA1.setAutor("Hideaki Anno");
         EVA1.ficha();
 
-        Filmes wolfChildren = new Filmes();
-        wolfChildren.setNome("Ôkami kodomo no Ame to Yuki");
+        Filmes wolfChildren = new Filmes("Ôkami kodomo no Ame to Yuki");
         wolfChildren.setGenero("Família");
         wolfChildren.setDuracaoEmMinutos(117);
         wolfChildren.setAutor("Mamoru Hosoda & Satoko Okudera");
@@ -77,6 +94,14 @@ public class Principal {
         episodio.setNome("Mother and Children");
         episodio.setTotalVisualizacoesMal(100000);
         filtro.filtra(episodio);
+
+        ArrayList<Filmes> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(perfectBlue);
+        listaDeFilmes.add(EVA1);
+        listaDeFilmes.add(wolfChildren);
+        System.out.println("Tamanho da lista" + listaDeFilmes.size());
+        System.out.println("Primeiro filme" + listaDeFilmes.get(0).getNome());
+        System.out.println("toString" + listaDeFilmes.get(0).toString());
 
 
 

@@ -9,6 +9,20 @@ public class Titulo {
     private int totalEstrelas;
     private String autor;
     public int duracaoEmMinutos;
+    public int anoDoLancamento;
+
+    public int getAnoDoLancamento() {
+        return anoDoLancamento;
+    }
+
+    public void setAnoDoLancamento(int anoDoLancamento) {
+        this.anoDoLancamento = anoDoLancamento;
+    }
+
+
+    public String getNome() {
+        return nome;
+    }
 
     public String getAutor() {
         return autor;
