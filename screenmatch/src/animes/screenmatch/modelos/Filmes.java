@@ -4,8 +4,8 @@ import animes.screenmatch.calculos.Classificavel;
 public class Filmes extends Titulo implements Classificavel {
     private String diretor;
 
-    public Filmes(String nome) {
-        this.setNome(nome);
+    public Filmes(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
     }
 
     public String getDiretor() {

@@ -1,6 +1,6 @@
 package animes.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     public String nome;
     public String genero;
     public String totalGeneros;
@@ -10,6 +10,15 @@ public class Titulo {
     private String autor;
     public int duracaoEmMinutos;
     public int anoDoLancamento;
+
+    public int pegaMediaEstrelas(double estrelas, int totalEstrelas){
+        return (int)estrelas / totalEstrelas;
+    }
+
+    public Titulo(String nome, int anoDoLancamento) {
+        this.nome = nome;
+        this.anoDoLancamento = anoDoLancamento;
+    }
 
     public int getAnoDoLancamento() {
         return anoDoLancamento;
@@ -41,7 +50,7 @@ public class Titulo {
     }
 
     public int getTotalEstrelas(){
-        return totalEstrelas;
+        return pegaMediaEstrelas(estrelas, totalEstrelas);
     }
 
     public void setNome(String nome) {
@@ -67,6 +76,11 @@ public class Titulo {
 
     public double mediaNotas(){
         return estrelas / totalEstrelas;
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome()); //delega - ordena get nome
     }
 
     //void outroGenero(String maisGeneros){

@@ -7,6 +7,10 @@ public class Animes extends Titulo implements Classificavel {
     private boolean ativo;
     private int totalVisualizacoesMal;
 
+    public Animes(String nome, int anoDoLancamento) {
+        super(nome, anoDoLancamento);
+    }
+
     public int getTotalVisualizacoesMal() {
         return totalVisualizacoesMal;
     }
